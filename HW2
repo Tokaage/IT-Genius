@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+inline void task1() {
+	int number;
+	int new_num = 0;
+	std::cout << "Enter number\n";
+	std::cin >> number;
+	for (int i = 0; number > 0; i++)
+	{	
+		new_num = new_num * 10 + number % 10;
+		number /= 10;
+	}
+	std::cout << new_num;
+}
+void task2() {
+	std::string str;
+	int a;
+	bool plus = true;
+	//метод считывания с консоли предложений с пробелами
+	std::getline(std::cin, str);
+
+	while (!str.empty()) {
+		a = atoi(str.c_str());
+		if (a < 0) {
+			plus = false;
+		}
+		std::getline(std::cin, str);
+	}
+	if (plus) {
+		std::cout << "All numbers are positive\n";
+	}
+	else {
+		std::cout << "Not all numbers are positive\n";
+	}
+}
+
+int main() {
+	//task1();
+
+	//task2();
+}
