@@ -1,0 +1,20 @@
+#include <iostream>
+#include <sstream>
+
+int main()
+{
+	std::string t;
+	std::getline(std::cin, t);
+
+	std::istringstream iss(t);
+	std::string word;
+	std::string ta;
+	while (iss >> word)
+	{
+		ta += word + " ";
+		if (word[0] == 'A')
+			ta += word + " ";
+	}
+	std::cout << ta << std::endl;
+	return 0;
+}
