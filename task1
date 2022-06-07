@@ -1,0 +1,28 @@
+#include <iostream>
+
+int main() {
+std::cout << "Введите размер массива: ";
+int size;
+int number_of_min, number_of_max;
+std::cin >> size;
+int array[size];
+for(int i = 0; i < size; i++)
+std::cin >> array[i];
+int minimal = array[size-1];
+int maximal = array[0];
+for(int i = 0; i < size; i++) {
+if(array[i] <= minimal){
+minimal = array[i];
+number_of_min = i;
+}
+if(array[i] >= maximal){
+maximal = array[i];
+number_of_max = i;
+}
+}
+array[number_of_max] = minimal;
+array[number_of_min] = maximal;
+std::cout << "max: " << maximal << " " << "min: " << minimal << std::endl;
+for(int i = 0; i < size; i++)
+std::cout << array[i] << " ";
+}

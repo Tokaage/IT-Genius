@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main(){
+std::cout << "Введите размерность матрицы (столбцы, строки):" << std::endl;
+int column, row;
+std::cin >> column;
+std::cin >> row;
+int array[column][row];
+std::cout << "Введите элементы матрицы: " << std::endl;
+for(int str = 0; str < column; str++){
+for(int stl = 0; stl < row; stl++){
+std::cout << "Элемент [" << str + 1 << "][" << stl + 1 << "]: ";
+std::cin >> array[str][stl];
+}
+}
+int sum = 0;
+for(int str = 0; str < column; str++){
+for(int stl = 0; stl < row; stl++){
+if(array[str][stl] > 0)
+sum += 1;
+}
+}
+std::cout << "sum: " << sum;
+}
