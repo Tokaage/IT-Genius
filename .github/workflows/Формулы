@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+float Conversion(float x) {
+	cout << x * 2.54 << endl;
+	return 0;
+}
+
+float Square(float a, float b){
+cout << a*b << endl;
+return 0;
+}
+
+int main() {
+	float X;
+	cin >> X;
+	Conversion(X);
+	float a, b;
+	cin >> a;
+	cin >> b;
+	Square(a, b);
+}
